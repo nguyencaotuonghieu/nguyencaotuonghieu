@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: nguyencaotuonghieu/nguyencaotuonghieu
+  branch: dev
 
 media_folder: static/assets
 public_folder: /assets
