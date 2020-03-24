@@ -19,13 +19,6 @@ module.exports = {
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-lodash",
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `markdown-pages`,
-        path: `${__dirname}/content/posts/`,
-      },
-    },
-    {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "assets",
