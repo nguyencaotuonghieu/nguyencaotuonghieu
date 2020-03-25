@@ -1,17 +1,24 @@
 backend:
-  name: github
-  repo: nguyencaotuonghieu/nguyencaotuonghieu
-  branch: dev
+    name: github
+    repo: nguyencaotuonghieu/nguyencaotuonghieu
+    branch: dev
 
 media_folder: static/assets
 public_folder: /assets
 
 collections:
-  - name: posts
-    label: Posts
-    folder: content/posts
-    create: true
-    fields:
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+    - name: posts
+      label: Posts
+      folder: content/posts
+      create: true
+      slug: {{year}}-{{month}}-{{day}}-{{slug}}
+      fields:
+          - { name: template, label: template, widget: hidden, default: post }
+          - { name: title, label: Title }
+          - { name: cover, label: Cover, widget: image, required: false }
+          - { name: date, label: Date, widget: datetime }
+          - { name: keywords, label: Keywords }
+          - { name: slug, widget: hidden, default: {{slug}} }
+          - { name: categories, label: Categories, widget: list }
+          - { name: tags, label: Tags, widget: list }
+          - { name: body, label: Body, widget: markdown }
