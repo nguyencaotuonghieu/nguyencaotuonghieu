@@ -3,8 +3,8 @@ backend:
     repo: nguyencaotuonghieu/nguyencaotuonghieu
     branch: dev
 
-media_folder: static/assets
-public_folder: /assets
+media_folder: content/images
+public_folder: "../images"
 
 collections:
     - name: posts
