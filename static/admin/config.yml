@@ -11,14 +11,14 @@ collections:
       label: Posts
       folder: content/posts
       create: true
-      slug: {{year}}-{{month}}-{{day}}-{{slug}}
+      slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
       fields:
           - { name: template, label: template, widget: hidden, default: post }
           - { name: title, label: Title }
           - { name: cover, label: Cover, widget: image, required: false }
           - { name: date, label: Date, widget: datetime }
           - { name: keywords, label: Keywords }
-          - { name: slug, widget: hidden, default: {{slug}} }
+          - { name: slug, label: slug, widget: hidden, default: "{{slug}}" }
           - { name: categories, label: Categories, widget: list }
           - { name: tags, label: Tags, widget: list }
           - { name: body, label: Body, widget: markdown }
