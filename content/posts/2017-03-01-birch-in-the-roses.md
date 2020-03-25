@@ -1,15 +1,16 @@
 ---
-template: "post"
-title: "Birch in the Roses"
-cover: "../images/placeholder-660x400-eeeeee.png"
-date: "2017-03-01T08:00:00Z"
-slug: "birch-in-the-roses"
-categories: 
-    - tech
-    - basic category
+template: post
+title: Birch in the Roses
+cover: ../images/xe-đạp-giant-atx-618-2020-1-1-528x330.jpg
+date: '2017-03-01T08:00:00Z'
+keywords: '12321321'
+slug: birch-in-the-roses
+categories:
+  - tech
+  - basic category
 tags:
-    - tag
-    - common tag
+  - tag
+  - common tag
 ---
 
 Lorem markdownum nunc fuerat vulgaris ipse. Profecisse Atridae flumen perit
