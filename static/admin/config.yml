@@ -29,8 +29,8 @@ collections:
       - name: slug
         label: Slug
         pattern:
-          - '^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$'
-          - Must not contain spaces and sperate words by '-' character
+          - '^[a-z0-9-]+$'
+          - Must not contain spaces or sperate words by '-' character
       - name: categories
         label: Categories
         widget: list
@@ -57,8 +57,8 @@ collections:
       - name: slug
         label: Slug
         pattern:
-          - '^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$'
-          - Must not contain spaces and sperate words by '-' character
+          - '^[a-z0-9-]+$'
+          - Must not contain spaces or sperate words by '-' character
       - label: Body
         name: body
         widget: markdown
