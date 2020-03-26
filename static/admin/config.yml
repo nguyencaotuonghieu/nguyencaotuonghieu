@@ -19,6 +19,8 @@ collections:
         default: post
       - name: title
         label: Title
+      - name: keywords
+        label: Keywords
       - name: cover
         label: Cover
         widget: image
