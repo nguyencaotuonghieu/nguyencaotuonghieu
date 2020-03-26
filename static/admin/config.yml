@@ -22,10 +22,9 @@ collections:
       - {
           name: slug,
           label: Slug,
-          widget: string,
           pattern:
             [
-              "^[A-Za-z0-9]+(?:-[A-Za-z0-9]+)*$",
+              "^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$",
               "Must not contain spaces and sperate words by '-' character",
             ],
         }
