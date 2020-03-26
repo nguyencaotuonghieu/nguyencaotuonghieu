@@ -2,32 +2,63 @@ backend:
   name: github
   repo: nguyencaotuonghieu/nguyencaotuonghieu
   branch: dev
-
 media_folder: content/images
 public_folder: ../images
-site_url: https://nguyencaotuonghieu.netlify.com/
-display_url: https://nguyencaotuonghieu.netlify.com/
-
+site_url: 'https://nguyencaotuonghieu.netlify.com/'
+display_url: 'https://nguyencaotuonghieu.netlify.com/'
 collections:
   - name: posts
     label: Posts
     folder: content/posts
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
     fields:
-      - { name: template, label: template, widget: hidden, default: post }
-      - { name: title, label: Title }
-      - { name: cover, label: Cover, widget: image, required: false }
-      - { name: date, label: Date, widget: datetime }
-      - {
-          name: slug,
-          label: Slug,
-          pattern:
-            [
-              "^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$",
-              "Must not contain spaces and sperate words by '-' character",
-            ],
-        }
-      - { name: categories, label: Categories, widget: list }
-      - { name: tags, label: Tags, widget: list }
-      - { name: body, label: Body, widget: markdown }
+      - name: template
+        label: template
+        widget: hidden
+        default: post
+      - name: title
+        label: Title
+      - name: cover
+        label: Cover
+        widget: image
+        required: false
+      - name: date
+        label: Date
+        widget: datetime
+      - name: slug
+        label: Slug
+        pattern:
+          - '^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$'
+          - Must not contain spaces and sperate words by '-' character
+      - name: categories
+        label: Categories
+        widget: list
+      - name: tags
+        label: Tags
+        widget: list
+      - name: body
+        label: Body
+        widget: markdown
+  - name: pages
+    label: Pages
+    folder: content/pages
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - name: template
+        label: template
+        widget: hidden
+        default: page
+      - name: title
+        label: Title
+      - name: description
+        label: Description
+      - name: slug
+        label: Slug
+        pattern:
+          - '^[A-Za-z0-9]+(?:-[A-Za-z0-9] +)*$'
+          - Must not contain spaces and sperate words by '-' character
+      - label: Body
+        name: body
+        widget: markdown
